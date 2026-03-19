@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Add Task</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="container">
+
+  <!-- Sidebar -->
+  <div class="sidebar">
+    <h3>Menu</h3>
+
+    <button onclick="goToAddTask()">Add Task</button>
+    <button onclick="goHome()">Today's Tasks</button>
+    <button onclick="goUpcoming()">Upcoming Tasks</button>
+    <button onclick="goCompleted()">Completed Tasks</button>
+    <button onclick="logout()">Logout</button>
+  </div>
+
+  <!-- Main Content -->
+  <div class="main">
+
+    <h2>Add Task</h2>
+
+    <div class="add-container">
+
+      <!-- LEFT: Input -->
+      <div class="card">
+        <input type="text" id="taskInput" placeholder="Enter task">
+
+        <!-- Date Picker -->
+        <input type="date" id="dueDate">
+
+        <!-- 🔥 Importance (below date) -->
+        <select id="priority">
+        <option value="not">Not Important</option>
+        <option value="important">Important ⭐</option>
+        <option value="very">Very Important 🔥</option>
+        </select>
+
+        <button onclick="addTask()">Add Task</button>
+      </div>
+
+      <!-- RIGHT: Task List -->
+      <div class="task-box">
+        <h3>Added Tasks</h3>
+        <ul id="taskList"></ul>
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
+
+<script src="js/tasks.js"></script>
+
+<script>
+window.onload = function () {
+  renderTasks("add");
+};
+
+/* Navigation */
+function goToAddTask() {
+  window.location.href = "add-task.html";
+}
+
+function goHome() {
+  window.location.href = "home.html";
+}
+
+function goUpcoming() {
+  window.location.href = "home.html#upcoming";
+}
+
+function goCompleted() {
+  window.location.href = "home.html#completed";
+}
+
+function logout() {
+  localStorage.removeItem("isLoggedIn");
+  window.location.href = "index.html";
+}
+</script>
+
+</body>
+</html>

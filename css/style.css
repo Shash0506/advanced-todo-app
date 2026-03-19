@@ -1,0 +1,181 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+/* Background */
+body {
+  background: #f6e8a6;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Card Style */
+.card {
+  background: #efd56b;
+  padding: 30px;
+  border-radius: 25px;
+  width: 300px;
+  text-align: center;
+}
+
+/* Inputs */
+input {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 20px;
+  border: none;
+  outline: none;
+}
+
+/* Buttons */
+button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 20px;
+  background: white;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+/* Layout for Home */
+.container {
+  display: flex;
+  width: 90%;
+  height: 90vh;
+}
+
+.sidebar {
+  width: 30%;
+  background: #f3de8a;
+  padding: 20px;
+  border-radius: 20px 0 0 20px;
+}
+
+.main {
+  width: 70%;
+  background: #efd56b;
+  padding: 20px;
+  border-radius: 0 20px 20px 0;
+}
+
+/* Sidebar buttons */
+.sidebar button {
+  display: block;
+  width: 100%;
+  margin: 10px 0;
+}
+
+.sidebar h3 {
+  margin-bottom: 15px;
+}
+
+.sidebar button {
+  background: white;
+  border-radius: 15px;
+  padding: 10px;
+}
+
+/* Container for Add Task Page */
+.add-container {
+  display: flex;
+  gap: 30px;
+  width: 80%;
+  margin: auto;
+}
+
+/* Right side yellow box */
+.task-box {
+  background: #efd56b;
+  padding: 20px;
+  border-radius: 25px;
+  width: 350px;
+}
+
+.task-box ul {
+  margin-top: 10px;
+}
+
+.task-box li {
+  margin: 10px 0;
+}
+
+.add-container {
+  align-items: flex-start;
+}
+
+.add-container {
+  display: flex;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+button {
+  transition: 0.2s;
+}
+
+button:hover {
+  transform: scale(1.05);
+}
+
+.important {
+  color: rgb(240, 77, 77);
+  font-weight: bold;
+}
+
+li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.add-container {
+  display: flex;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.task-box {
+  background: #efd56b;
+  padding: 20px;
+  border-radius: 20px;
+  width: 350px;
+}
+
+.important {
+  color: red;
+  font-weight: bold;
+}
+
+li {
+  display: flex;
+  justify-content: space-between;
+  margin: 10px 0;
+}
+
+select {
+  margin-top: 10px;
+  padding: 10px;
+  border-radius: 15px;
+  border: none;
+}
+
+.not {
+  color: #555;
+}
+
+.important {
+  color: orange;
+  font-weight: bold;
+}
+
+.very {
+  color: red;
+  font-weight: bold;
+}

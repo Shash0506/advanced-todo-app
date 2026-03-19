@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Home</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="container">
+
+  <!-- Sidebar -->
+  <div class="sidebar">
+    <h3>Menu</h3>
+
+    <button onclick="goToAddTask()">Add Task</button>
+    <button onclick="showSection('today')">Today's Tasks</button>
+    <button onclick="showSection('upcoming')">Upcoming Tasks</button>
+    <button onclick="showSection('completed')">Completed Tasks</button>
+    <button onclick="showSection('filter')">Filter</button>
+    <button onclick="logout()">Logout</button>
+
+  </div>
+
+  <!-- Main Content -->
+  <div class="main">
+    <h2 id="sectionTitle">Today's Tasks</h2>
+      <ul id="taskList">
+      </ul>
+  </div>
+
+</div>
+
+<div id="taskArea">
+  <ul id="taskList"></ul>
+</div>
+
+<h4 id="taskCount"></h4>
+
+<!-- Auth Protection -->
+<script>
+  const isLoggedIn = localStorage.getItem("isLoggedIn");
+  if (!isLoggedIn) {
+    alert("Please login first!");
+    window.location.href = "index.html";
+  }
+</script>
+
+<script src="js/ui.js"></script>
+
+<script>
+function logout() {
+  localStorage.removeItem("isLoggedIn");
+  window.location.href = "index.html";
+}
+</script>
+
+<script>
+function goToAddTask() {
+  window.location.href = "add-task.html";
+}
+</script>
+
+<script src="js/tasks.js"></script>
+
+<script src="js/ui.js"></script>
+<script src="js/tasks.js"></script>
+
+<script>
+window.onload = function () {
+  const hash = window.location.hash;
+
+  if (hash === "#upcoming") {
+    showSection("upcoming");
+  } else if (hash === "#completed") {
+    showSection("completed");
+  } else {
+    showSection("today");
+  }
+};
+</script>
+<input type="text" id="searchInput" placeholder="Search tasks..." onkeyup="searchTasks()">
+
+</body>
+</html>

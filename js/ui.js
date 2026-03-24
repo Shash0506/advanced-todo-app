@@ -9,9 +9,6 @@ function showSection(section) {
   } 
   else if (section === "completed") {
     title.innerText = "Completed Tasks";
-  } 
-  else if (section === "filter") {
-    title.innerText = "Filter Tasks";
   }
 
   // 🔥 ONLY render tasks (no UI duplication)
